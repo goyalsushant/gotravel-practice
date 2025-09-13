@@ -51,6 +51,23 @@ body {
     color: #e74c3c;
 }
 
+.hamburger {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+}
+
+.nav-menu-hamburger {
+    display: none;
+}
+
+.hamburger span {
+    width: 25px;
+    height: 3px;
+    background: #333;
+    margin: 3px 0;
+}
+
 /* Hero Section Styles */
 /* 
     vh - wiewport height
@@ -390,5 +407,58 @@ body {
     .footer {
         padding-left: 40px;
         padding-right: 40px;
+    }
+}
+
+@media (max-width: 480px) {
+    .nav-menu {
+        display: none;
+    }
+
+    .hamburger {
+        display: flex;
+    }
+
+    .nav-menu-hamburger {
+        display: none;
+        list-style: none;
+        flex-direction: column;
+        flex-wrap: wrap;
+    }
+
+    .nav-menu-hamburger li {
+        text-align: right;
+        line-height: 1.6rem;
+        flex: 1;
+        box-sizing: border-box;
+        padding: 10px;
+    }
+
+    .nav-menu-hamburger li a{
+        text-decoration: none;
+    }
+
+    section {
+        padding: 0 20px;
+    }
+
+    .hero h1 {
+        font-size: 24px;
+    }
+
+    .footer-content {
+        flex-direction: column;
+    }
+
+    .contact-content {
+        flex-direction: column;
+    }
+    .contact-form {
+        /* flex: 1; */
+        width: 100%;
+    }
+
+    .testimonials-grid {
+        flex-direction: column;
     }
 }
